@@ -7,6 +7,22 @@ $head-color: #333333;
 $head-color-2: #FFFFFF;
 $color-3: #000000;
 
+.button-size-header {
+    border-radius: 40px;
+    width: 170px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.social-width {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: 0.3s;
+}
+
 body,a {
     font-family: 'Roboto', sans-serif;
 }
@@ -75,10 +91,6 @@ body,a {
     button {
         background-color: $head-color-2;
         border: 2px solid $bg-2;
-        border-radius: 40px;
-        width: 170px;
-        height: 40px;
-        transition: 0.3s;
         &:hover {
             background-color: $bg-2;
             transition: 0.3s;
@@ -88,6 +100,7 @@ body,a {
             color: $head-color-2;
             transition: 0.3s;
         }
+        @extend .button-size-header;
     }
     a {
         color: $color-3;
@@ -144,10 +157,6 @@ body,a {
     button {
         background-color: $bg-2;
         border: 2px solid $head-color-2;
-        border-radius: 40px;
-        width: 170px;
-        height: 40px;
-        transition: 0.3s;
         &:hover {
             background-color: $head-color-2;
             transition: 0.3s;
@@ -157,6 +166,7 @@ body,a {
             color: $bg-2;
             transition: 0.3s;
         }
+        @extend .button-size-header;
     }
     a {
         color: $head-color-2;
@@ -321,64 +331,44 @@ body,a {
                 margin-right: 80px;
             }
             .youtube {
-                width: 30px;
-                height: 30px;
-                display: block;
                 background-image: url(../img/youtube.svg);
-                background-repeat: no-repeat;
-                position: absolute;
                 top: 12px;
                 left: 10px;
-                transition: 0.3s;
                 &:hover {
                     transition: 0.3s;
                     transform: rotate(360deg);
                 }
+                @extend .social-width;
             }
             .vk {
-                width: 30px;
-                height: 30px;
-                display: block;
                 background-image: url(../img/vk.svg);
-                background-repeat: no-repeat;
-                position: absolute;
                 top: 13px;
                 left: 6px;
-                transition: 0.3s;
                 &:hover {
                     transition: 0.3s;
                     transform: rotate(360deg);
                 }
+                @extend .social-width;
             }
             .fb {
-                width: 30px;
-                height: 30px;
-                display: block;
                 background-image: url(../img/fb.svg);
-                background-repeat: no-repeat;
-                position: absolute;
                 top: 10px;
                 left: 14px;
-                transition: 0.3s;
                 &:hover {
                     transition: 0.3s;
                     transform: rotate(360deg);
                 }
+                @extend .social-width;
             }
             .insta {
-                width: 30px;
-                height: 30px;
-                display: block;
                 background-image: url(../img/instagram.svg);
-                background-repeat: no-repeat;
-                position: absolute;
                 top: 9.5px;
                 left: 9.5px;
-                transition: 0.3s;
                 &:hover {
                     transition: 0.3s;
                     transform: rotate(360deg);
                 }
+                @extend .social-width;
             }
         }
     }
